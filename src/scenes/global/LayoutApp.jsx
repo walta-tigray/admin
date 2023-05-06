@@ -229,7 +229,7 @@ const LayoutApp = () => {
                         textAlign: 'center',
                     }}
                 >
-                    Developed by <a href="https://3madvert.com" target="_blank">Sabawyan Tech</a>
+                    Developed by <a href="https://sabawyan.tech/" target="_blank">Sabawyan Tech</a>
                 </Footer>
             </Layout>
         </Layout>
