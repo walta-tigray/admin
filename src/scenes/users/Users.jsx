@@ -26,29 +26,29 @@ function Users() {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const sample_users = [
-        {
-            user_id: '001sdfu09sdf0923j0f',
-            full_name: 'John Doe',
-            phone_number: '0912345678',
-            createdAt: '5/5/2023',
-            updatedAt: '5/5/2023',
-        },
-        {
-            user_id: '001sdfu09sdf0923j0f',
-            full_name: 'Robel Hailu',
-            phone_number: '0912345678',
-            createdAt: '5/5/2023',
-            updatedAt: '5/5/2023',
-        },
-        {
-            user_id: '001sdfu09sdf0923j0f',
-            full_name: 'Mubarek Seid',
-            phone_number: '0912345678',
-            createdAt: '5/5/2023',
-            updatedAt: '5/5/2023',
-        },
-    ];
+    // const sample_users = [
+    //     {
+    //         user_id: '001sdfu09sdf0923j0f',
+    //         full_name: 'John Doe',
+    //         phone_number: '0912345678',
+    //         createdAt: '5/5/2023',
+    //         updatedAt: '5/5/2023',
+    //     },
+    //     {
+    //         user_id: '001sdfu09sdf0923j0f',
+    //         full_name: 'Robel Hailu',
+    //         phone_number: '0912345678',
+    //         createdAt: '5/5/2023',
+    //         updatedAt: '5/5/2023',
+    //     },
+    //     {
+    //         user_id: '001sdfu09sdf0923j0f',
+    //         full_name: 'Mubarek Seid',
+    //         phone_number: '0912345678',
+    //         createdAt: '5/5/2023',
+    //         updatedAt: '5/5/2023',
+    //     },
+    // ];
 
     const [searchQuery, setSearchQuery] = useState("");
     const keys = ["full_name", "phone_number"];
@@ -65,7 +65,7 @@ function Users() {
 
     useEffect(() => {
         baseURL({
-            url: '/api/v1/user/all',
+            url: '/api/v1/users',
             method: 'GET',
         })
             .then(res => {
@@ -112,7 +112,7 @@ function Users() {
                     <Flex justifyContent="justify-start" spaceX="space-x-2">
                         <Title>User</Title>
                     </Flex>
-                    <Button onClick={() => navigate('/add_user')}>Add New</Button>
+                    {/* <Button onClick={() => navigate('/add_user')}>Add New</Button> */}
                 </div>
 
                 {isLoading ? <div className="loading">
@@ -131,7 +131,7 @@ function Users() {
                         </TableHead>
 
                         <TableBody>
-                            {search(sample_users)?.map((item) => (
+                            {search(users)?.map((item) => (
                                 <TableRow key={item.user_id}>
                                     <TableCell>{item.user_id}</TableCell>
                                     <TableCell>{item.full_name}</TableCell>

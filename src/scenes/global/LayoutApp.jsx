@@ -27,6 +27,9 @@ import Groups2Icon from '@mui/icons-material/Groups2';
 import AuthContext from '../../context/AuthProvider';
 const { Header, Content, Footer, Sider } = Layout
 
+import logo from '../../assets/waltana_red.png'
+import AddNewEmployee from '../empoyees/AddNewEmployee';
+
 const LayoutApp = () => {
 
     const [collapsed, setCollapsed] = useState(false)
@@ -102,7 +105,11 @@ const LayoutApp = () => {
                         padding: 20,
                         marginLeft: 10
                     }}>
-                    <Link className='nik__logo' to="/">ADMIN PORTAL</Link>
+                    <Link className='nik__logo' to="/">
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <p>Waltana</p> <img src={logo} width={30} height={30} style={{ marginLeft: 10 }} />
+                        </div>
+                    </Link>
                 </div>
                 {
                     // decoded?.userType === "admin" ? <Menu
@@ -122,7 +129,7 @@ const LayoutApp = () => {
                                 setCollapsed(true)
                             }
                         }}
-                    /> 
+                    />
                     // : <Menu
                     //     theme="dark"
                     //     mode="inline"
@@ -212,6 +219,7 @@ const LayoutApp = () => {
                             <Route path='/users' element={<Users />} />
                             <Route path='/reports' element={<Reports />} />
                             <Route path='/employees' element={<Employees />} />
+                            <Route path='/add_employee' element={<AddNewEmployee />} />
                             <Route path='*' element={<NotFound />} />
                         </Route>
                     </Routes>

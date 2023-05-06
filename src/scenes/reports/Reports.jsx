@@ -23,32 +23,32 @@ const colors = {
     'in progress': 'yellow',
 };
 
-const sample_reports = [
-    {
-        report_id: '001sdfu09sdf0923j0x',
-        victim: 'Victim A',
-        report_type: 'Sample-A',
-        report_address: 'kebele-01',
-        status: 'solved',
-        createdAt: '5/5/2023',
-    },
-    {
-        report_id: '001sdfu09sdf0923j0f',
-        victim: 'Victim B',
-        report_type: 'Sample-A',
-        report_address: 'kebele-01',
-        status: 'new',
-        createdAt: '5/5/2023',
-    },
-    {
-        report_id: '001sdfu09sdf0923j0s',
-        victim: 'Victim C',
-        report_type: 'Sample-A',
-        report_address: 'kebele-01',
-        status: 'in progress',
-        createdAt: '5/5/2023',
-    },
-];
+// const sample_reports = [
+//     {
+//         report_id: '001sdfu09sdf0923j0x',
+//         victim: 'Victim A',
+//         report_type: 'Sample-A',
+//         report_address: 'kebele-01',
+//         status: 'solved',
+//         createdAt: '5/5/2023',
+//     },
+//     {
+//         report_id: '001sdfu09sdf0923j0f',
+//         victim: 'Victim B',
+//         report_type: 'Sample-A',
+//         report_address: 'kebele-01',
+//         status: 'new',
+//         createdAt: '5/5/2023',
+//     },
+//     {
+//         report_id: '001sdfu09sdf0923j0s',
+//         victim: 'Victim C',
+//         report_type: 'Sample-A',
+//         report_address: 'kebele-01',
+//         status: 'in progress',
+//         createdAt: '5/5/2023',
+//     },
+// ];
 
 function Reports() {
 
@@ -61,7 +61,7 @@ function Reports() {
     const [isLoading, setIsLoading] = useState(true);
 
     const [searchQuery, setSearchQuery] = useState("");
-    const keys = ["victim", "report_address"];
+    const keys = ["report_id", "report_address"];
 
     const search = (items) => {
         return items.filter(item =>
@@ -75,7 +75,7 @@ function Reports() {
 
     useEffect(() => {
         baseURL({
-            url: '/api/v1/report/all',
+            url: '/api/v1/reports',
             method: 'GET',
         })
             .then(res => {
@@ -133,16 +133,18 @@ function Reports() {
                                 <TableHeaderCell>Report ID</TableHeaderCell>
                                 <TableHeaderCell>Victim</TableHeaderCell>
                                 <TableHeaderCell>Report Type</TableHeaderCell>
+                                <TableHeaderCell>Report Address</TableHeaderCell>
                                 <TableHeaderCell>Report Status</TableHeaderCell>
                                 <TableHeaderCell>Created At</TableHeaderCell>
+                                <TableHeaderCell>Operation</TableHeaderCell>
                             </TableRow>
                         </TableHead>
 
                         <TableBody>
-                            {search(sample_reports)?.map((item) => (
+                            {search(reports)?.map((item) => (
                                 <TableRow key={item.report_id}>
                                     <TableCell>{item.report_id}</TableCell>
-                                    <TableCell>{item.victim}</TableCell>
+                                    <TableCell>{item.createdBy}</TableCell>
                                     <TableCell>{item.report_type}</TableCell>
                                     <TableCell>{item.report_address}</TableCell>
                                     <TableCell>{item.report_status}</TableCell>

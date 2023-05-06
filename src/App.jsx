@@ -10,6 +10,7 @@ import { Dashboard } from '@mui/icons-material';
 import NotFound from './scenes/sessions/NotFound';
 import Unauthorized from './scenes/unauthorized/Unauthorized';
 import RequireAuth from './context/RequireAuth';
+import AddNewEmployee from './scenes/empoyees/AddNewEmployee';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/users' element={<Users />} />
             <Route path='/reports' element={<Reports />} />
             <Route path='/employees' element={<Employees />} />
+            <Route path='/add_employee' element={<AddNewEmployee />} />
           </Route>
           <Route element={[<LayoutApp />]}>
             <Route path='/unauthorized' element={[<Unauthorized />]} />

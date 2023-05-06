@@ -41,8 +41,10 @@ function RequireAuth(props) {
         decoded = jwt_decode(auth);
     }
 
-    return (props?.allowedRoles?.includes(decoded?.userType)) ? props.childern
-        : navigate('/warehouses', { replace: true });
+    // return (props?.allowedRoles?.includes(decoded?.userType)) ? props.childern
+    //     : navigate('/warehouses', { replace: true });
+
+    props.childern
 }
 
 export default RequireAuth

@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import baseURL from '../../api_requests/url';
 import AuthContext from '../../context/AuthProvider';
 
-
 const Login = () => {
     const { auth, setAuth } = useContext(AuthContext);
     const [messageApi, contextHolder] = message.useMessage();
@@ -61,7 +60,7 @@ const Login = () => {
             <div
                 style={{ width: '100%', background: '#faf8f8', height: '100vh', display: "flex", justifyContent: "center", alignItems: "center", alignContent: "center" }}
             >
-                {/* <img src={niklogo} width={100} height={100} /> */}
+             
                 <div className="login">
                     <h3>Login</h3>
                     <Form
