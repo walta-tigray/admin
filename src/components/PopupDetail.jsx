@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react'
-import CancelIcon from '@mui/icons-material/Cancel';
+import React, { useEffect } from "react";
+import CancelIcon from "@mui/icons-material/Cancel";
 
 function PopupDetail({ trigger, setTrigger, data }) {
-
-  return (trigger) ? (
-    <div className='popup__container'>
+  return trigger ? (
+    <div className="popup__container">
       <div className="popup__inner">
-        <button className='popup__close__btn'
-          onClick={() => setTrigger(false)}> {<CancelIcon />}</button>
+        <button className="popup__close__btn" onClick={() => setTrigger(false)}>
+          {" "}
+          {<CancelIcon />}
+        </button>
 
-        <h3 className='popup__header'>Product detail</h3>
+        <h3 className="popup__header">Product detail</h3>
 
         <table style={{ width: "100%" }}>
           <tbody>
@@ -29,7 +30,9 @@ function PopupDetail({ trigger, setTrigger, data }) {
         </table>
       </div>
     </div>
-  ) : "";
+  ) : (
+    ""
+  );
 }
 
-export default PopupDetail
+export default PopupDetail;

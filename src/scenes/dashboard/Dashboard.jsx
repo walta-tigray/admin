@@ -1,8 +1,8 @@
-import React from 'react'
-import Cards from './Cards'
-import Charts from './Charts'
-import Circle from './Circle'
-import Transaction from './Transaction'
+import React from "react";
+import Cards from "./Cards";
+import Charts from "./Charts";
+import Circle from "./Circle";
+import Transaction from "./Transaction";
 
 function Dashboard() {
   return (
@@ -15,7 +15,7 @@ function Dashboard() {
         <br />
         <Transaction /> */}
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

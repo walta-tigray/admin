@@ -1,12 +1,12 @@
-import React from 'react'
-import { Table } from 'antd';
+import React from "react";
+import { Table } from "antd";
 
 function Tables({ data, columns }) {
-    return (
-        <div>
-            <Table dataSource={data} columns={columns} />;
-        </div>
-    )
+  return (
+    <div>
+      <Table dataSource={data} columns={columns} />;
+    </div>
+  );
 }
 
-export default Tables
+export default Tables;
