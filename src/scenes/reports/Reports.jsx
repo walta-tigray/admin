@@ -151,14 +151,6 @@ function Reports() {
                   <TableCell>{item.status}</TableCell>
                   <TableCell>{item.createdAt}</TableCell>
                   <TableCell>
-                    <Badge
-                      color={colors[item.status]}
-                      text={item.status}
-                      size="xs"
-                    />
-                  </TableCell>
-
-                  <TableCell>
                     <div style={{ display: "flex" }}>
                       <Button
                         size="xs"
@@ -169,7 +161,7 @@ function Reports() {
                         text="More"
                         color="gray"
                       />
-                      <Button
+                      {/* <Button
                         size="xs"
                         importance="secondary"
                         text="Edit"
@@ -180,7 +172,7 @@ function Reports() {
                         importance="secondary"
                         text="Delete"
                         color="gray"
-                      />
+                      /> */}
                     </div>
                   </TableCell>
                 </TableRow>
