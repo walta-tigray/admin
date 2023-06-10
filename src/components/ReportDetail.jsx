@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Descriptions } from "antd";
 import CancelIcon from "@mui/icons-material/Cancel";
 import DescriptionsItem from "antd/es/descriptions/Item";
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { Marker } from 'react-map-gl';
 
 function ReportDetail({ trigger, setTrigger, data }) {
+
+  mapboxgl.accessToken = import.meta.env.VITE_APP_MAPBOX_TOKEN;
+
+  useEffect(() => {
+    if (trigger) {
+      const map = new mapboxgl.Map({
+        container: "mymap",
+        style: "mapbox://styles/mapbox/streets-v11",
+        zoom: 7,
+        center: [data.longitude, data.latitude]
+      });
+      // Create a new marker and set color.
+      const marker = new mapboxgl.Marker({
+        color: "#051221",
+      }).setLngLat([data.longitude, data.latitude])
+        .addTo(map);
+    }
+  }, [data])
+
   return trigger ? (
-    <div className="popup__container">
+    <div className="popup__container" style={{ overflow: "auto", height: "100vh", paddingTop: "50vh" }}>
       <div className="popup__inner">
         <button className="popup__close__btn" onClick={() => setTrigger(false)}>
           {" "}
           {<CancelIcon />}
         </button>
+
+        <div id="mymap" style={{ height: 200, width: "100%" }} />
 
         <Descriptions column={1} title="Report Detail">
           <Descriptions.Item label="Report ID">
