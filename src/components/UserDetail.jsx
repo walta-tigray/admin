@@ -17,13 +17,6 @@ function UserDetail({ trigger, setTrigger, data }) {
           <Descriptions.Item label="Id Number">
             {data?.id_number}
           </Descriptions.Item>
-          <Descriptions.Item label="Front Id">
-            {data?.front_id}
-          </Descriptions.Item>
-          <Descriptions.Item label="Back Id">{data?.back_id}</Descriptions.Item>
-          <Descriptions.Item label="User Image">
-            {data?.user_image}
-          </Descriptions.Item>
           <Descriptions.Item label="Full Name">
             {data?.full_name}
           </Descriptions.Item>

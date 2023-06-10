@@ -136,7 +136,7 @@ function Users() {
             <TableBody>
               {search(users)?.map((item) => (
                 <TableRow key={item.user_id}>
-                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.id_number}</TableCell>
                   <TableCell>{item.full_name}</TableCell>
                   <TableCell>{item.phone_number}</TableCell>
                   <TableCell>{item.createdAt}</TableCell>

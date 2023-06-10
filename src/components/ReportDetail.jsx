@@ -28,15 +28,6 @@ function ReportDetail({ trigger, setTrigger, data }) {
           <Descriptions.Item label="Report Status">
             {data?.status}
           </Descriptions.Item>
-          <Descriptions.Item label="Report Image">
-            {data?.image}
-          </Descriptions.Item>
-          <Descriptions.Item label="Report Video">
-            {data?.video}
-          </Descriptions.Item>
-          <Descriptions.Item label="Report Audio">
-            {data?.audio}
-          </Descriptions.Item>
           <Descriptions.Item label="Location">
             {data?.latitude + ", " + data?.longitude}
           </Descriptions.Item>
