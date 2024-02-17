@@ -16,7 +16,7 @@
     "@heroicons/react": "^1.0.6",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
-    "@mui/x-data-grid": "^5.17.25",
+    "@mui/x-data-grid": "^6.19.4",
     "@tremor/react": "^1.8.2",
     "antd": "^5.2.3",
     "axios": "^1.6.7",
