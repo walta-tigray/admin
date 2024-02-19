@@ -13,7 +13,7 @@
     "@ant-design/plots": "^1.2.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "^2.1.1",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@mui/x-data-grid": "^6.19.4",
