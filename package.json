@@ -18,7 +18,7 @@
     "@mui/material": "^5.15.11",
     "@mui/x-data-grid": "^6.19.6",
     "@tremor/react": "^1.8.2",
-    "antd": "^5.14.2",
+    "antd": "^5.15.0",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.5",
