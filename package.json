@@ -17,7 +17,7 @@
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
     "@mui/x-data-grid": "^6.19.6",
-    "@tremor/react": "^1.8.2",
+    "@tremor/react": "^3.14.1",
     "antd": "^5.14.2",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
