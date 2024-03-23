@@ -19,7 +19,7 @@
     "@mui/x-data-grid": "^6.19.6",
     "@tremor/react": "^3.14.1",
     "antd": "^5.15.3",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.5",
     "jwt-decode": "^4.0.0",
